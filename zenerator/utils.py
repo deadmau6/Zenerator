@@ -2,7 +2,7 @@ from os import path
 import json
 
 class Utils:
-	
+    
     @staticmethod
     def load_from_json(fpath):
         """Load a valid json configuration file and return a dictionary."""
