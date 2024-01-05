@@ -21,4 +21,10 @@ A simple and configurable code generation tool with user defined templates
  - [ ] Define a robust set of operations and rules that make up the settings.
  - [ ] Create a command line interface.
  - [ ] Create an install script.
- - [ ] Create a generator module that uses the settings and templates to create the end result. 
+ - [ ] Create a generator module that uses the settings and templates to create the end result.
+
+### Test Strategy:
+
+ * Running tests: `/Zenerator$ pytest` runs **all** tests. To run a _specific_ test you just need to specify its path, like so: `/Zenerator$ pytest test/unit/test_utils.py`.
+
+ * **Print statements not showing up?** Try using the `-s` flag or you can use `--capture=method      per-test capturing method: one of fd|sys|no|tee-sys`.
