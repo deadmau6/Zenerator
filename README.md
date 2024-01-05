@@ -8,8 +8,8 @@ A simple and configurable code generation tool with user defined templates
 
 ### Features:
 
- - [ ] Save settings and templates both locally and globally.
- - [ ] Create a unbiquitous local folder structure to save settings and templates to.
+ - [x] Save settings and templates both locally and globally.
+ - [ ] Create a ubiquitous local folder structure to save settings and templates to.
  - [ ] Allow arguments in the template to be filled by the user.
  - [ ] Allow user to define start and end tags for the individual template parsing.
  - [ ] Allow users to create templates that append code to existing files.
@@ -17,7 +17,7 @@ A simple and configurable code generation tool with user defined templates
 ### Tasks:
 
  - [ ] Create a parsing module.
- - [ ] Create a simple configuration module that determines the settings and rules.
+ - [x] Create a simple configuration module that determines the settings and rules.
  - [ ] Define a robust set of operations and rules that make up the settings.
  - [ ] Create a command line interface.
  - [ ] Create an install script.
