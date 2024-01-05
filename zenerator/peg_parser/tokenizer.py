@@ -69,4 +69,5 @@ class Tokenizer:
     def peek_token(self):
         if self.pos == len(self.tokens):
             self.tokens.append(next(self.token_gen))
-        return self.tokens[self.pos]     
+        return self.tokens[self.pos]
+        

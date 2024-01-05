@@ -470,3 +470,4 @@ class TemplateParser(Parser):
                 token = self._next_token()
                 chars.append(token.value)
         return Node('string', ''.join(chars))
+        
