@@ -1,0 +1,47 @@
+start ::= (non-code | code)+
+
+code ::= start_tag block end_tag
+
+block ::= (expression | statement)+
+
+statement ::= assign | for_stmt | if_stmt
+
+expression ::= (variable | ternary)";"
+
+for_stmt ::= "for" identifier "in" array "{" block "}"
+
+if_stmt ::= "if" boolean_opr "{" block "}" (elif_stmt)*
+elif_stmt ::= ("elif" boolean_opr "{" block "}")* (else_stmt)?
+else_stmt ::= "else" "{" block "}"
+
+comparison ::= variable (comp_opr variable)*
+comp_opr ::= "<" | ">" | "==" | ">=" | "<=" | "!="
+
+assign ::= identifier "=" expression
+
+variable ::= literal | identifier
+
+identifier ::= id_char(id_char|integer)*
+id_char ::= <[a-zA-Z_]>
+
+ternary ::= variable "?" boolean_opr ":" variable
+
+boolean_opr ::= or_test
+or_test ::= and_test | or_test "||" and_test
+and_test ::= not_test | and_test "&&" not_test
+not_test ::= comparison | "!" not_test 
+
+literal ::= array | basic_type
+
+array ::= "[" (array_item)+ "]" | "[]"
+array_item ::= basic_type ("," basic_type)*
+
+basic_type = number | string
+
+number ::= integer | float
+integer ::= (digit)+
+float ::= (digit)*"."(digit)+
+digit ::= <[0-9]>
+
+string ::= "'"(char)*"'" | '"'(char)*'"' 
+char ::= <any character>
